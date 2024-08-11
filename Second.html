@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+      <form onsubmit="cal()">
+         Enter Name:<input type="text" name="uname" id="name" required><br>
+         Enter Password:<input type="password" name="pwd" id="pwd" required><br>
+         <input type="submit">
+      </form>
+      <script>
+        function cal()
+        {
+           var regexp="/A-Za-z0-9/"
+          var n=document.getElementById("name").value;
+          var pwd=document.getElementById("pwd").value;
+          if(n.length>10)
+             window.alert("Enter characters Below 10");
+          if(!regexp.match(pwd))
+          {
+             window.alert("Follow the constraints");
+             return false;
+          }
+
+        }
+      </script>
+    </body>
+</html>
